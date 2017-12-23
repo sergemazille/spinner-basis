@@ -1,0 +1,52 @@
+#spinner {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+
+    position: fixed;
+    z-index: calc(var(--overlay-z-index, 10) + 1);
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    height: 5rem;
+    width: 6rem;
+
+    &.is-visible {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        visibility: visible;
+    }
+
+    // spinner rounds
+    > [class|="spinner"] {
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        background-color: var(--spinner-color, #fff);
+        border-radius: 50%;
+
+        animation: var(--spinner-animation-name, loading) var(--spinner-speed, 1.35s) infinite ease-in-out both;
+    }
+
+    .spinner-1 {
+        animation-delay: var(--spinner-speed, 1.35s)/8;
+    }
+
+    .spinner-2 {
+        animation-delay: var(--spinner-speed, 1.35s)/4;
+    }
+}
+
+// animation
+@keyframes loading {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
