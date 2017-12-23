@@ -3,7 +3,7 @@ import Overlay from 'overlay-basis/src/overlay';
 let spinner;
 let overlay = new Overlay();
 
-export class Spinner {
+export default class {
 
     constructor() {
 
