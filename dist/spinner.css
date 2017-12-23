@@ -25,10 +25,10 @@
     animation: var(--spinner-animation-name, loading) var(--spinner-speed, 1.35s) infinite ease-in-out both;
 }
 #spinner .spinner-1 {
-    animation-delay: var(--spinner-speed, 1.35s)/8;
+    animation-delay: calc(var(--spinner-speed, 1.35s)/8);
 }
 #spinner .spinner-2 {
-    animation-delay: var(--spinner-speed, 1.35s)/4;
+    animation-delay: calc(var(--spinner-speed, 1.35s)/4);
 }
 
 @keyframes loading {
